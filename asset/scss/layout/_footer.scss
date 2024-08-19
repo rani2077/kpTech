@@ -1,0 +1,215 @@
+@import "../mixin/_mixin.scss";
+
+
+
+
+
+.sc-footer{
+    padding: 150px 0;
+    background: #1c4d9a;
+    color: #fff;
+
+    @include mobile-large{
+        padding: 60px 0;
+    }
+
+    .inner{
+        display: flex;
+
+        @include mobile-large{
+            flex-direction:column;
+        }
+    }
+    .eng{
+        font-family: 'Montserrat', sans-serif;
+        color: #99afd2;
+    }
+    .group-info{
+        width:calc(100%/3);
+
+        @include desktop-small{
+            flex: 0 0 41.66667%;
+            max-width: 41.66667%;
+
+            padding-right:10px;
+        }
+        @include mobile-large{
+            padding-right: 0;
+            order:2;
+            width: 100%;
+            flex:initial;
+            max-width:100%;
+        }
+        .info-box{
+            margin-bottom: 117px;
+
+            @include mobile-large{
+                margin: 55px 0;
+            }
+            .info{
+                font-size: 18px;
+                margin-bottom: 16px;
+                font-family: 'Montserrat', sans-serif;
+                display: flex;
+
+                @include mobile-large{
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                }
+                .name{
+                    width: 62px;
+                    display: inline-block;
+                    margin-right: 30px;
+
+                    @include mobile-large{
+                        width: 51px;
+                        margin-right: 10px;
+                    }
+                }
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .sns-box.mobile{
+            @include mobile{
+                display: flex;
+                margin-bottom: 25px;    
+            }
+            .link-sns{
+                display: block;
+                margin-right: 25px;
+            }
+            img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+        .legal-box{
+            margin-bottom: 13px;
+            font-family:"Pretendard Variable", sans-serif;
+
+            @include mobile-large{
+                margin-bottom: 9px;
+            }
+            .text{
+                font-size: 16px;
+
+                @include mobile-large{
+                    font-size: 15px;
+                }
+                &:first-child{
+                    margin-right: 15px;
+
+                    @include mobile-large{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .copy-box{
+            font-size: 16px;
+
+            @include mobile-large{
+                font-size: 15px;
+            }
+        }
+    }
+
+
+    .group-family{
+        width: calc(100% / 6);
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include desktop-small{
+            width: 25%;
+            max-width:25%;
+        }
+        @include mobile-large{
+            padding: 0;
+            order:1;
+            max-width:375px;
+            line-height: 1.267;
+            width: initial;
+        }
+        .name{
+            font-size: 18px;
+            margin-bottom: 15px;
+
+            @include mobile-large{
+                margin-bottom: 5px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+        .site-item{
+            font-family:"Montserrat", sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:1px solid rgba(255,255,255,0.5);
+            a{
+                font-size: 18px;
+                padding: 10px 0;
+
+                @include mobile-large{
+                    font-size: 15px;
+                    padding: 15px 0;
+                }
+            }
+            .right-up-arrow{
+            }
+        }
+        .sns-box{
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+
+            @include mobile-large{
+                display: none;
+            }
+            .link-sns{
+                width: 32px;
+                height: 32px;
+                display: block;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+    .group-link{
+        display: flex;
+        flex-direction:column;
+        margin-left: auto;
+        gap: 20px;
+        max-width: 16.66667%;
+        flex: 0 0 16.66667%;
+        padding-left: 10px;
+        @include desktop-small{
+            width: 25%;
+            max-width:25%;
+            flex: 0 0 25%;
+        }
+        @include mobile-large{
+            display: none;
+        }
+        .link-site{
+            display: inline;
+            font-weight: 600;
+            font-size: 28px;
+            &:first-child{
+                color: #fff;
+            }
+        }
+    }
+}
